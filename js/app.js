@@ -21,15 +21,15 @@ $(document).ready(function(){
   	$("input.button").click(function(event){ //have a click function opn the mouse.
   		event.preventDefault();//prevent and reset once the number is inputted and reset to try again.
   		guessNumber = $("#userGuess").val();
-  			if (guessNumber > 0 && guessNumber % 1 === 0 && guessNumber < 100){ //creating a or statements in the for loop with the following conditions if they are in between 1 to 100.
+  			if (guessNumber > 0 && guessNumber %1 === 0 && guessNumber < 100){ //creating a or statements in the for loop with the following conditions if they are in between 1 to 100.
   				$("ul.guessBox").append("<li>"+ guessNumber +"</li>");
   				$("#userGuess").val("");//Display the number value output on the screen.
-  				$("#count").text(countNumber + 1);
-  				countNumber =+ 1; //iterates the numbers until the number is correct after many guesses.b Same as countNumber = countNumber + 1.
-  				testNumber();//
-  			}
+  				$("#count").text(countNumber + 1);//All the numbers collected.
+  				countNumber += 1; //iterates the numbers until the number is correct after many guesses.b Same as countNumber = countNumber + 1.
+  				testNumber();// here is the name of testNumber() http://kineme.net/Discussion/DevelopingCompositions/CheckifnumberNaNjavascriptpatch
+  			}//http://www.w3schools.com/jsref/jsref_number.asp
   			else {
-  				window.alert("Please enter a valid integer between 1 and 100.");//pop up windows alert if instructions are not followed when if the number does not match the conditions
+  				alert("Please enter a valid integer between 1 and 100.");//pop up windows alert if instructions are not followed when if the number does not match the conditions
   				$("#userGuess").val("");//Display the number output on the screen.
   			}
   	});

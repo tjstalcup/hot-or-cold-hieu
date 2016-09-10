@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var randomNumber = Math.floor((Math.random() * 100) + 1);
   //Create variables for numbers count and guess (var) starting at zero all positive numbers.
 	var countNumber = 0; 
-  var guessNumber = 0;
+    var guessNumber = 0;
   //Given in the assignment
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
@@ -42,16 +42,16 @@ $(document).ready(function(){
   		if (Math.abs(randomNumber - guessNumber) >= 50){
   			$("#feedback").text("VERY ICE COLD"); //Display the results of the condition above. 
   		}
-  		else if (Math.abs(randomNumber - guessNumber)< 50 && Math.abs(randomNumber - guessNumber) >= 30){
+  		else if (Math.abs(randomNumber - guessNumber) <= 50 && Math.abs(randomNumber - guessNumber) >= 30){
   			$("#feedback").text("COLD");//Display the results of the condition above.
   		}
-  		else if (Math.abs(randomNumber - guessNumber) >= 20 && Math.abs(randomNumber - guessNumber) < 30){
+  		else if (Math.abs(randomNumber - guessNumber) >= 20 && Math.abs(randomNumber - guessNumber) <= 30){
   			$("#feedback").text("WARM"); //Display the results of the condition above.
   		}
-  		else if (Math.abs(randomNumber - guessNumber) < 20 && Math.abs(randomNumber - guessNumber) >= 10){
+  		else if (Math.abs(randomNumber - guessNumber) <= 20 && Math.abs(randomNumber - guessNumber) >= 10){
   			$("#feedback").text("HOT"); //Display the results of the condition above.
   		}
-  		else if (Math.abs(randomNumber - guessNumber) < 10 && Math.abs(randomNumber - guessNumber) !== 0){
+  		else if (Math.abs(randomNumber - guessNumber) <= 10 && Math.abs(randomNumber - guessNumber) !== 0){
   			$("#feedback").text("VERY HOT"); //Display the results of the condition above.
   		}
   		else{

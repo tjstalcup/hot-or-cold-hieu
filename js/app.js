@@ -47,19 +47,19 @@ $(document).ready(function(){
   			$("#feedback").text("Cold");
   		}
   		else if (Math.abs(chosenNumber-guess)>=20 && Math.abs(chosenNumber-guess)<30){
-  			$("#feedback").text("warm");
+  			$("#feedback").text("Warm");
   		}
   		else if (Math.abs(chosenNumber-guess)<20 && Math.abs(chosenNumber-guess)>=10){
-  			$("#feedback").text("hot");
+  			$("#feedback").text("Hot");
   		}
   		else if (Math.abs(chosenNumber-guess)<10 && Math.abs(chosenNumber-guess)!==0){
-  			$("#feedback").text("very hot");
+  			$("#feedback").text("Very Hot");
   		}
   		else{
   			$("#feedback").text("YOU GOT IT! YAY!");
   		}
   	}
-
+// The newGame function with the following steps from 1 to the end.
   	function newGame(){
   		chosenNumber = Math.floor((Math.random() * 100) + 1);
 		//console.log(chosenNumber);
